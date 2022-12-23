@@ -8,7 +8,6 @@ module.exports = async function (name, options) {
   const cwd = process.cwd();
   // path.join拼接 要创建项目的目录
   const targetAir = path.join(cwd, name);
-
   // 如果该目录已存在
   if (fs.existsSync(targetAir)) {
     // 强制删除
@@ -45,7 +44,8 @@ module.exports = async function (name, options) {
 
   // 通过inquirer，让用户的输入的项目内容：作者和描述
   const ask = await inquirer.prompt(args);
+  const template = options.template
   // 创建项目
-  const generator = new Generator(name, targetAir, ask);
+  const generator = new Generator(name, targetAir, ask, template);
   generator.create();
 };

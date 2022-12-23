@@ -26,6 +26,7 @@ async function wrapLoading(fn, message, ...args) {
 async function getRepo() {
     // 获取git仓库的项目列表
     const templateData = await wrapLoading(getRepolist, 'waiting fetch template');
+    console.log(templateData.list[0].options.child[0].options);
     let listStr = ''
     templateData.list.map(item => {
         listStr += chalk.yellow(`______________${item.name}________________\n`);

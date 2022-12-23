@@ -38,8 +38,9 @@ class Generator {
   // name 项目名称
   // target 创建项目的路径
   // 用户输入的 作者和项目描述 信息
-  constructor(name, target, ask) {
+  constructor(name, target, ask, template) {
     this.name = name;
+    this.template = template;
     this.target = target;
     this.ask = ask;
     // download-git-repo 默认不支持异步调用，需要使用util插件的util.promisify 进行转换
@@ -50,7 +51,24 @@ class Generator {
     const templateData = await wrapLoading(getRepolist, 'waiting fetch template');
     const repolist = templateData.list
     if (!repolist) return;
+    if(this.template) {
+      const templateList = []
+      repolist[0].options.child.forEach(item => {
+        templateList.push(...item.options.child)
+      })
 
+      repolist[1].options.child.forEach(item => {
+        templateList.push(...item.options.child)
+      })
+
+      templateList.push(repolist[2].options.child)
+      let currentData = templateList.find((item) => item.path === this.template);
+      if(currentData) {
+        return currentData
+      } else {
+        throw new Error('找不到该模板');
+      }
+    }
     const repos = repolist.map((item) => item.name);
     // 通过inquirer 让用户选择要下载的项目模板
     const { repo } = await inquirer.prompt({

@@ -9,6 +9,7 @@ program
   .description('create a new project(创建新项目)')
   // create命令的选项
   .option('-f, --force', 'overwrite target if it exist(覆盖已有同名称项目)')
+  .option('-t, --template <template>', 'choose template(制定项目模板)')
   .action((name, options) => {
     // 执行'./create.js'，传入项目名称和 用户选项
     require('./create')(name, options);
