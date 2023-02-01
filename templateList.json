@@ -1,0 +1,326 @@
+{
+  "list": [
+    {
+      "path": "mobile",
+      "name": "移动端",
+      "description": "移动端通用模板",
+      "options": {
+        "title": "请选择您要使用的技术框架",
+        "child": [
+          {
+            "path": "Vue2",
+            "name": "Vue2",
+            "description": "基于Vue2框架的移动端通用模板",
+            "options": {
+              "title": "请选择您要使用的移动端通用模板",
+              "child": [
+                {
+                  "path": "vue2-base",
+                  "name": "vue2-base(vue2官方默认模板 + router + vuex)",
+                  "description": "vue2官方默认模板 + router + vuex",
+                  "githubUrl": "",
+                  "giteeUrl": "https://gitee.com/gitopenchina/template-vue2-base.git#master"
+                },
+                {
+                  "path": "vant-finance-mobile",
+                  "name": "vant-finance-mobile(基于Vant的理财产品页面)",
+                  "description": "一个基于 Vant 的UI Demo，模拟一个简单的理财产品页面， 主要是为了学习和记录基于 Vue/Vant 开发移动设备单页应用的相关知识。",
+                  "githubUrl": "https://github.com/huzongyao/vant-finance-mobile.git",
+                  "giteeUrl": "https://gitee.com/gitopenchina/template-mobile-vue2-vant-finance.git"
+                }
+              ]
+            }
+          },
+          {
+            "path": "Vue3",
+            "name": "Vue3",
+            "description": "基于Vue3框架的移动端通用模板",
+            "options": {
+              "title": "请选择您要使用的移动端通用模板",
+              "child": [
+                {
+                  "path": "vue3-init",
+                  "name": "vite-vue3-init(vue3官方默认模板)",
+                  "description": "vue3官方默认模板",
+                  "githubUrl": "",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vite-vue3-init.git"
+                },
+                {
+                  "path": "vue3-base",
+                  "name": "vue3-base-js(vue3官方默认模板 + router + pinia)",
+                  "description": "vue3官方默认模板 + router + pinia",
+                  "githubUrl": "https://github.com/webpon/template-vue3-js.git",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "vue3-base",
+                  "name": "vue3-base-ts(vue3官方默认模板 + router + pinia)",
+                  "description": "vue3官方默认模板 + router + pinia",
+                  "githubUrl": "https://github.com/webpon/template-vue3-ts.git",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "vue3-vant4-mobile",
+                  "name": "vue3-vant4-mobile(技术栈Vue3.2、Vite3、Vant4、Pinia2)",
+                  "description": "\uD83D\uDC4B\uD83D\uDC4B\uD83D\uDC4B Vue3 Vant4 Mobile 使用了最新的Vue3.2、Vite3、Vant4、Pinia2、Typescript、Windicss等主流技术开发，集成 Dark Mode(暗黑)模式和系统主题色，并且持久化保存，集成 Mock 数据，顺便写了个 登录/注册/找回密码 页面（包括逻辑），你只需要替换你的 API 即可，顺便写了个包含 NavBar、TabBar的 Layout，顺便集成了Axios、useEcharts、IconSvg",
+                  "githubUrl": "https://github.com/xiangshu233/vue3-vant4-mobile.git#main",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue3-vant4-mobile.git#main"
+                },
+                {
+                  "path": "vue-mobile-template",
+                  "name": "vue-mobile-template(基于vue3.x的开源免费移动端模板)",
+                  "description": "基于 vue3.x + CompositionAPI + javascript + vite + vant + vue-router-next + pinia 的开源免费移动端模板，希望减少工作量，帮助大家实现快速开发移动端。",
+                  "githubUrl": "https://github.com/Coder-XiaoYi/vue-mobile-template.git#master",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue-mobile-template.git"
+                }
+              ]
+            }
+          },
+          {
+            "path": "react",
+            "name": "react",
+            "description": "基于react框架的移动端通用模板",
+            "options": {
+              "title": "请选择您要使用的移动端通用模板",
+              "child": [
+                {
+                  "path": "react-base",
+                  "name": "react-base-js(react默认模板)",
+                  "description": "react默认模板",
+                  "githubUrl": "https://github.com/webpon/template-react-js.git#master",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "react-base",
+                  "name": "react-base-vite-ts(react-vite 默认模板)",
+                  "description": "react-vite默认模板",
+                  "githubUrl": "https://github.com/webpon/template-react-vite-ts.git#master",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "vite-react-ts-h5-template",
+                  "name": "vite-react-ts-antd(react-vite h5模板)",
+                  "description": "该项目是由 Vite 构建,基于 React Hooks 框架配合 Typescript 语言的 H5 端快速开发的模板项目,该项目适配屏幕使用的postcss-px-to-viewport直接写 px 自动转换为 vw 或者 rem,项目也添加了路由切换动画,适配chrome safari底部工具栏",
+                  "githubUrl": "https://github.com/swcbo/react-ts-h5-template.git#master",
+                  "giteeUrl": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "PC端",
+      "name": "PC端",
+      "description": "PC端通用模板",
+      "options": {
+        "title": "请选择您要使用的技术框架",
+        "child": [
+          {
+            "path": "Vue2",
+            "name": "Vue2",
+            "description": "基于Vue2框架的PC端通用模板",
+            "options": {
+              "title": "请选择您要使用的PC端通用模板",
+              "child": [
+                {
+                  "path": "vue2-base",
+                  "name": "vue2-base(vue2官方默认模板 + router + vuex)",
+                  "description": "vue2官方默认模板 + router + vuex",
+                  "githubUrl": "",
+                  "giteeUrl": "https://gitee.com/gitopenchina/template-vue2-base.git"
+                },
+                {
+                  "path": "vue-admin-template",
+                  "name": "vue-admin-template(这是一个极简的 vue admin 管理后台)",
+                  "description": "这是一个极简的 vue admin 管理后台。它只包含了 Element UI & axios & iconfont & permission control & lint，这些搭建后台必要的东西。",
+                  "githubUrl": "https://github.com/PanJiaChen/vue-admin-template.git#master",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue-admin-template.git"
+                },
+                {
+                  "path": "vue-element-admin",
+                  "name": "vue-element-admin(vue-element-admin 是一个后台前端解决方案)",
+                  "description": "vue-element-admin 是一个后台前端解决方案，它基于 vue 和 element-ui实现。它使用了最新的前端技术栈，内置了 i18n 国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。",
+                  "githubUrl": "https://github.com/PanJiaChen/vue-element-admin.git#master",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue-element-admin.git"
+                },
+                {
+                  "path": "vue2-manage",
+                  "name": "vue2-manage(后台项目node-elm的管理系统)",
+                  "description": "此项目是 vue + element-ui 构建的后台管理系统，是后台项目node-elm 的管理系统，所有的数据都是从服务器实时获取的真实数据，具有真实的注册、登陆、管理数据、权限验证等功能。",
+                  "githubUrl": "https://github.com/bailicangdu/vue2-manage.git#master",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue2-manage.git"
+                },
+                {
+                  "path": "tdesign-vue-starter",
+                  "name": "tdesign-vue-starter(tdesign官方管理后台模板)",
+                  "description": "TDesign Vue Starter 是一个基于 tdesign-vue，使用 Vue2、Vite开发，可进行个性化主题配置，旨在提供项目开箱即用的、配置式的中后台项目。",
+                  "githubUrl": "https://github.com/Tencent/tdesign-vue-starter.git#main",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue-admin-template.git"
+                }
+              ]
+            }
+          },
+          {
+            "path": "Vue3",
+            "name": "Vue3",
+            "description": "基于Vue3框架的PC端通用模板",
+            "options": {
+              "title": "请选择您要使用的PC端通用模板",
+              "child": [
+                {
+                  "path": "vue3-init",
+                  "name": "vite-vue3-init(vue3官方默认模板)",
+                  "description": "vue3官方默认模板",
+                  "githubUrl": "",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vite-vue3-init.git"
+                },
+                {
+                  "path": "vue3-base",
+                  "name": "vue3-base-js(vue3官方默认模板 + router + pinia)",
+                  "description": "vue3官方默认模板 + router + pinia",
+                  "githubUrl": "https://github.com/webpon/template-vue3-js.git",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "vue3-base",
+                  "name": "vue3-base-ts(vue3官方默认模板 + router + pinia)",
+                  "description": "vue3官方默认模板 + router + pinia",
+                  "githubUrl": "https://github.com/webpon/template-vue3-ts.git",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "vue-admin-box",
+                  "name": "vue-admin-box (vue3+vite+element-plus免费并且开源的中后台管理系统模板)",
+                  "description": "vue-admin-box是一个免费并且开源的中后台管理系统模板。使用最新版本的vue3+vite+element-plus开发而成，目的是为了解决通用型的业务中后台系统复杂的配置。",
+                  "githubUrl": "https://github.com/cmdparkour/vue-admin-box.git#master",
+                  "giteeUrl": "https://gitee.com/gitopenchina/vue-admin-box.git"
+                },
+                {
+                  "path": "pure-admin-thin",
+                  "name": "pure-admin-thin (vue3+vite+element-plus vue-pure-admin精简版)",
+                  "description": "精简版是基于 vue-pure-admin 提炼出的架子，包含主体功能，更适合实际项目开发，打包后的大小在全局引入 element-plus 的情况下仍然低于 2.3MB，并且会永久同步完整版的代码。开启 brotli 压缩和 cdn 替换本地库模式后，打包大小低于 350kb",
+                  "githubUrl": "https://github.com/xiaoxian521/pure-admin-thin.git#main",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "tdesign-vue-next-starter",
+                  "name": "tdesign-vue-next-starter(tdesign官方管理后台模板)",
+                  "description": "tdesign-vue-next-starter 是一个基于 tdesign-vue，使用 Vue3、Vite开发，可进行个性化主题配置，旨在提供项目开箱即用的、配置式的中后台项目。",
+                  "githubUrl": "https://github.com/Tencent/tdesign-vue-next-starter.git#main",
+                  "giteeUrl": "https://gitee.com/gitopenchina/tdesign-vue-next-starter.git#main"
+                }
+              ]
+            }
+          },
+          {
+            "path": "React",
+            "name": "React",
+            "description": "基于React框架的PC端通用模板",
+            "options": {
+              "title": "请选择您要使用的PC端通用模板",
+              "child": [
+                {
+                  "path": "react-base",
+                  "name": "react-base-js(react默认模板)",
+                  "description": "react默认模板",
+                  "githubUrl": "https://github.com/webpon/template-react-js.git#master",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "react-base",
+                  "name": "react-base-vite-ts(react-vite默认模板)",
+                  "description": "react-vite默认模板",
+                  "githubUrl": "https://github.com/webpon/template-react-vite-ts.git#master",
+                  "giteeUrl": ""
+                },
+                {
+                  "path": "react-antd-admin-template",
+                  "name": "react-antd-admin-template(基于 React 和 Ant Design 的后台管理系统模板)",
+                  "description": "react-antd-admin-template 是一个基于 React 和 Ant Design 的后台管理系统模板。它内置了用户登录/登出，动态路由，权限校验，用户管理等典型的业务模型，可以帮助你快速搭建企业级中后台产品原型，是你接私活的不二之选。",
+                  "githubUrl": "https://github.com/NLRX-WJC/react-antd-admin-template.git#master",
+                  "giteeUrl": "https://gitee.com/gitopenchina/react-antd-admin-template.git"
+                },
+                {
+                  "path": "tdesign-react-starter",
+                  "name": "tdesign-react-starter(tdesign官方管理后台模板)",
+                  "description": "TDesign React Starter 是一个基于 tdesign-react，使用 React、Vite2开发，可进行个性化主题配置，旨在提供项目开箱即用的、配置式的中后台项目。",
+                  "githubUrl": "https://github.com/Tencent/tdesign-react-starter.git#main",
+                  "giteeUrl": "https://gitee.com/gitopenchina/tdesign-react-starter.git"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "uniapp小程序",
+      "name": "uniapp小程序",
+      "description": "uniapp小程序",
+      "options": {
+        "title": "请选择您要下载的模板",
+        "child": [
+          {
+            "path": "uniapp默认模板",
+            "name": "uniapp默认模板",
+            "description": "uniapp默认模板",
+            "giteeUrl": "https://gitee.com/gitopenchina/template-uniapp-vue2-base.git#master"
+          },
+          {
+            "path": "uniapp vite js默认模板",
+            "name": "uniapp vite js默认模板",
+            "description": "uniapp vite js默认模板",
+            "giteeUrl": "https://gitee.com/dcloud/uni-preset-vue.git#vite"
+          },
+          {
+            "path": "uniapp vite ts默认模板",
+            "name": "uniapp vite ts默认模板",
+            "description": "uniapp vite ts默认模板",
+            "giteeUrl": "https://gitee.com/dcloud/uni-preset-vue.git#vite-ts"
+          },
+          {
+            "path": "hello uniapp vue2 uni-ui",
+            "name": "hello uniapp vue2 uni-ui",
+            "description": "hello uniapp vue2 uni-ui模板",
+            "giteeUrl": "https://gitee.com/gitopenchina/template-hello-uniapp.git"
+          }
+        ]
+      }
+    },
+    {
+      "path": "doc",
+      "name": "文档",
+      "description": "快速生成文档网站",
+      "options": {
+        "title": "请选择您要下载的模板",
+        "child": [
+          {
+            "path": "vitepress",
+            "name": "vitepress-doc",
+            "description": "vitepress+vue3模板",
+            "giteeUrl": "https://gitee.com/gitopenchina/vitepress-doc.git#master"
+          }
+        ]
+      }
+    },
+    {
+      "path": "electron",
+      "name": "electron",
+      "description": "electron桌面客户端",
+      "options": {
+        "title": "请选择您要下载的模板",
+        "child": [
+          {
+            "path": "electron-vite-vue",
+            "name": "electron-vite-vue",
+            "description": "electron-vite-vue模板",
+            "githubUrl": "https://github.com/electron-vite/electron-vite-vue.git#main",
+            "giteeUrl": ""
+          }
+        ]
+      }
+    }
+  ]
+}
