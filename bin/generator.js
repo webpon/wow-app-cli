@@ -12,24 +12,22 @@ const downloadGitRepo = require('download-git-repo');
 // download-git-repo 默认不支持异步调用，需要使用util插件的util.promisify 进行转换
 const util = require('util');
 // 获取git项目列表
-const { getRepolist } = require('./http');
+const { getRepolist, getGiteeRepolist } = require('./http');
 // 完成后的提示信息
 const { commonTips } = require('./tips');
 
-async function wrapLoading(fn, message, ...args) {
+async function wrapLoading (fn, message, ...args) {
   const spinner = ora(message);
   // 下载开始
   spinner.start();
-
   try {
     const result = await fn(...args);
     // 下载成功
     spinner.succeed();
     return result;
-  } catch (e) {
-    console.log(e);
-    // 下载失败
-    spinner.fail('Request failed ……');
+  } catch (error) {
+    spinner.fail('地址一获取列表失败')
+    throw error
   }
 }
 
@@ -46,12 +44,24 @@ class Generator {
     // download-git-repo 默认不支持异步调用，需要使用util插件的util.promisify 进行转换
     this.downloadGitRepo = util.promisify(downloadGitRepo);
   }
-  async getRepo() {
+  async getRepo () {
     // 获取git仓库的项目列表
-    const templateData = await wrapLoading(getRepolist, 'waiting fetch template');
+    let templateData = []
+    try {
+      templateData = await wrapLoading(getRepolist, 'waiting fetch template');
+    } catch (error) {
+      try {
+        templateData = await wrapLoading(getGiteeRepolist, 'waiting fetch template');
+      } catch (error) {
+        console.log(error);
+        const spinner = ora('');
+        // 下载失败
+        spinner.fail('Request failed ……');
+      }
+    }
     const repolist = templateData.list
     if (!repolist) return;
-    if(this.template) {
+    if (this.template) {
       const templateList = []
       repolist[0].options.child.forEach(item => {
         templateList.push(...item.options.child)
@@ -63,7 +73,7 @@ class Generator {
 
       templateList.push(repolist[2].options.child)
       let currentData = templateList.find((item) => item.path === this.template);
-      if(currentData) {
+      if (currentData) {
         return currentData
       } else {
         throw new Error('找不到该模板');
@@ -109,12 +119,12 @@ class Generator {
   }
 
   // 下载用户选择的项目模板
-  async download(repo, tag) {
+  async download (repo, tag) {
     await wrapLoading(this.downloadGitRepo, 'waiting download template', `direct:${repo}`, path.resolve(process.cwd(), this.target), { clone: true });
   }
 
   // 文件入口，在create.js中 执行generator.create();
-  async create() {
+  async create () {
     const repo = await this.getRepo();
     console.log('你选择了：', chalk.green(repo.name));
     console.log('模板描述：', chalk.yellow(repo.description));
@@ -142,7 +152,7 @@ class Generator {
       fs.writeFileSync(jsonPath, JSON.stringify(json, null, '\t'), 'utf-8');
       commonTips(this.name)
     }
-    
+
   }
 }
 
