@@ -26,6 +26,7 @@ async function wrapLoading(fn, message, ...args) {
 async function getRepo() {
     // 获取git仓库的项目列表
     const templateData = await wrapLoading(getRepolist, 'waiting fetch template');
+  console.log(templateData);
     // console.log(templateData.list[0].options.child[0].options);
     let listStr = ''
     templateData.list.map(item => {
@@ -43,7 +44,7 @@ async function getRepo() {
         }
     })
     console.log(listStr);
-    const link = terminalLink('https://www.npmjs.com/package/e-template-cli', '官网');
+    const link = terminalLink('http://gitopenchina.gitee.io/wow-app-cli-doc/', '官网');
     console.log('更多模板信息请访问：', chalk.blue(link));
 }
 getRepo();
