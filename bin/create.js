@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs-extra');
-const inquirer = require('inquirer');
 const Generator = require('./generator');
 
 module.exports = async function (name, options) {
@@ -14,24 +13,28 @@ module.exports = async function (name, options) {
     if (options.force) {
       await fs.remove(targetAir);
     } else {
-      // 通过inquirer：询问用户是否确定要覆盖 or 取消
-      let { action } = await inquirer.prompt([
-        {
-          name: 'action',
-          type: 'list',
-          message: 'Target already exists',
-          choices: [
+      (async () => {
+        import('inquirer').then(async (inquirer) => {
+          // 通过inquirer：询问用户是否确定要覆盖 or 取消
+          let { action } = await inquirer.default.prompt([
             {
-              name: 'overwrite',
-              value: 'overwrite'
-            },
-            {
-              name: 'cancel',
-              value: false
+              name: 'action',
+              type: 'list',
+              message: 'Target already exists',
+              choices: [
+                {
+                  name: 'overwrite',
+                  value: 'overwrite'
+                },
+                {
+                  name: 'cancel',
+                  value: false
+                }
+              ]
             }
-          ]
-        }
-      ]);
+          ]);
+        });
+      })();
       if (!action) {
         return;
       } else {
@@ -43,9 +46,12 @@ module.exports = async function (name, options) {
   const args = require('./ask');
 
   // 通过inquirer，让用户的输入的项目内容：作者和描述
-  const ask = await inquirer.prompt(args);
-  const template = options.template
-  // 创建项目
-  const generator = new Generator(name, targetAir, ask, template);
-  generator.create();
+  import('inquirer').then(async (inquirer) => {
+    const ask = await inquirer.default.prompt(args);
+    const template = options.template
+    // 创建项目
+    const generator = new Generator(name, targetAir, ask, template);
+    generator.create();
+  })
+
 };

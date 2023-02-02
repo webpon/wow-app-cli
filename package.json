@@ -1,6 +1,6 @@
 {
   "name": "wow-app-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "一个含有丰富优质模板的脚手架",
   "main": "./bin/index.js",
   "bin": {
@@ -25,7 +25,7 @@
     "commander": "^8.3.0",
     "download-git-repo": "^3.0.2",
     "fs-extra": "^10.0.0",
-    "inquirer": "^8.2.0",
+    "inquirer": "^9.1.4",
     "ora": "^5.4.1",
     "terminal-link": "^2.1.1",
     "util": "^0.12.4"

@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs-extra');
 // 引入ora工具：命令行loading 动效
 const ora = require('ora');
-const inquirer = require('inquirer');
+// const inquirer = require('inquirer');
 // 控制台输出样式
 const chalk = require('chalk');
 // 控制台链接
@@ -11,6 +11,7 @@ const terminalLink = require('terminal-link');
 const downloadGitRepo = require('download-git-repo');
 // download-git-repo 默认不支持异步调用，需要使用util插件的util.promisify 进行转换
 const util = require('util');
+
 // 获取git项目列表
 const { getRepolist, getGiteeRepolist } = require('./http');
 // 完成后的提示信息
@@ -79,6 +80,7 @@ class Generator {
         throw new Error('找不到该模板');
       }
     }
+    const inquirer = (await import('inquirer')).default
     const repos = repolist.map((item) => item.name);
     // 通过inquirer 让用户选择要下载的项目模板
     const { repo } = await inquirer.prompt({
