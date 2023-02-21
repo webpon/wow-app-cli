@@ -33,25 +33,25 @@ module.exports = async function (name, options) {
               ]
             }
           ]);
+
+          if (!action) {
+            return;
+          } else {
+            // 删除文件夹
+            await fs.remove(targetAir);
+            const args = require('./ask');
+
+            // 通过inquirer，让用户的输入的项目内容：作者和描述
+            import('inquirer').then(async (inquirer) => {
+              const ask = await inquirer.default.prompt(args);
+              const template = options.template
+              // 创建项目
+              const generator = new Generator(name, targetAir, ask, template);
+              generator.create();
+            })
+          }
         });
       })();
-      if (!action) {
-        return;
-      } else {
-        // 删除文件夹
-        await fs.remove(targetAir);
-      }
     }
   }
-  const args = require('./ask');
-
-  // 通过inquirer，让用户的输入的项目内容：作者和描述
-  import('inquirer').then(async (inquirer) => {
-    const ask = await inquirer.default.prompt(args);
-    const template = options.template
-    // 创建项目
-    const generator = new Generator(name, targetAir, ask, template);
-    generator.create();
-  })
-
 };
